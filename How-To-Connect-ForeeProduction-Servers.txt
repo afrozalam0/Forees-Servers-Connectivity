@@ -1,0 +1,56 @@
+How to connect Foree Production Environment on PTCL LHE.
+
+1. Connect to Bastion Host via public IP 182.176.15.85 with port 2233 from putty using pamcovery.ppk
+2. Now you can connect any production machine using private IP from bastion host.
+
+Production Site
+===================
+ssh 10.0.10.23	(For Node1)
+ssh 10.0.10.29	(For Node2)
+ssh 10.0.10.88	(Key Server)
+ssh 10.0.10.12	(Bastion Hostin Local IP)
+ssh 10.0.10.51	(HA Proxy)
+ssh 10.0.10.101	(Celery)
+ssh 10.0.20.51	(Mongodb Backend Cluster Node1)
+ssh 10.0.20.52	(Mongodb Backend Cluster Node2)
+ssh 10.0.20.53	(Mongodb Backend Cluster Node3)
+ssh 10.0.21.54	(Mongodb Backend Cluster Node4 at DR-Site)
+ssh 10.0.10.22 	(ForeeBusiness App)
+ssh 10.0.20.21	(MongoDB Business Cluster Node1)
+ssh 10.0.20.22	(MongoDB Business Cluster Node2)
+ssh 10.0.20.23	(MongoDB Business Cluster Node3)
+ssh 10.0.21.24	(MongoDB Business Cluster Node4 DR-Site)
+ssh 10.0.10.20	(Foree Website)
+ssh 10.0.10.30	(Reporting
+ssh 10.0.10.33	(Reporting BO)
+ssh 10.0.20.61	(Reporting DB)
+ssh 10.0.10.162	(Infosec Qradar)
+ssh 10.0.10.136	(IPSec VPN Tech Partner)
+ssh 10.0.10.137	(IPSec VPN Banks)
+ssh 10.0.10.138	(IPSec VPN 1link and UBL)
+ssh 10.0.10.205 (Redis)
+ssh 10.0.10.151 (Wazuh)
+ssh 10.0.10.155 (Centeralize logs)
+ssh 10.0.10.84	(Sandbox Key Server)
+
+DR-Site:
+============
+You can also connect DR Site via Production Bastion Host. You can also connect DR-Site via Public IP: 59.103.77.180 port: 2233
+ssh 10.0.11.12	(Bastion Host)
+ssh 10.0.11.23	(Backend App Node1)
+ssh 10.0.11.29	(Backend App Node2)
+ssh 10.0.11.20	(Website)
+ssh 10.0.11.88	(Key Server)
+ssh 10.0.11.51	(HAProxy)
+ssh 10.0.11.163	(QRadar)
+ssh 10.0.11.22	(Business App)
+ssh 10.0.11.151	(Wazuh)
+ssh 10.0.11.155	(Logs Server)
+ssh 10.0.11.101	(Celery)
+ssh 10.0.11.136	(IPSec VPN Tech Partner)
+ssh 10.0.11.137	(IPSec VPN Banks)
+ssh 10.0.11.136	(IPSec VPN 1link)
+
+
+
+
